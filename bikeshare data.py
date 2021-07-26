@@ -42,8 +42,7 @@ def get_filters():
                 break   
             else:
                 break
-    except ValueError :
-        print('Fuck you! Try again.')
+    
 
     finally:
         print('-'*40,'\n')
