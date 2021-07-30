@@ -60,7 +60,7 @@ def get_filters():
 def load_data(city, month, day):
     # step 1
     df = pd.read_csv(CITY_DATA[city])  # city user will input
-    print('hereeeeeeee \n', pd.read_csv(CITY_DATA[city]))
+    # print('hereeeeeeee \n', pd.read_csv(CITY_DATA[city]))
 
     # step 2
     df['Start Time'] = pd.to_datetime(df['Start Time'])
@@ -165,22 +165,27 @@ def user_stats(df):
 
     print('\nCalculating User Stats...\n')
     start_time = time.time()
-
-    # Display counts of user types
-    user_types = df['User Type'].value_counts()
-    print('\n Users Type \n ', user_types)
-    # Display counts of gender
-    gen = df['Gender'].value_counts()
-    print('\n Genders Type \n', gen)
-
-    # Display earliest, most recent, and most common year of birth
-    mc = df['Birth Year'].mode()[0]
-    print('\n Most commen year of birth : ', mc)
-    er = df['Birth Year'].min()
-    print('\n Earliest year of birth : ', er)
-    re = df['Birth Year'].max()
-    print('\n Recent year of birth : ', re)
-
+    try:
+        # Display counts of user types
+        user_types = df['User Type'].value_counts()
+        print('\n Users Type \n ', user_types)
+    except:
+        print('sorry')
+    try:
+        # Display counts of gender
+        gen = df['Gender'].value_counts()
+        print('\n Genders Type \n', gen)
+    
+        
+        # Display earliest, most recent, and most common year of birth
+        mc = df['Birth Year'].mode()[0]
+        print('\n Most commen year of birth : ', mc)
+        er = df['Birth Year'].min()
+        print('\n Earliest year of birth : ', er)
+        re = df['Birth Year'].max()
+        print('\n Recent year of birth : ', re)
+    except:
+        print(' \n Sorry ! Gender stats cannot be calculated because Gender does not appear in the dataframe \n and Washington data does not have Gender and Birth Year columns')
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
