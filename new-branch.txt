@@ -1,5 +1,5 @@
-print heloooo
+whene use git revert its mean change in the file and use git add . git commited into stages 
+the if u need to delete the commit 
+use the git revert with hsh 
 
-mmm helloo 
-v
-fuck uou all 
+----------
