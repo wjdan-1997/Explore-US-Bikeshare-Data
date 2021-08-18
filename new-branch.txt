@@ -3,3 +3,5 @@ the if u need to delete the commit
 use the git revert with hsh 
 
 ----------
+new coommit 
+helloo I need to change here !!!!!!!
