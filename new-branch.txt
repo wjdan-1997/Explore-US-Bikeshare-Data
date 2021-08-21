@@ -1,8 +1,0 @@
-whene use git revert its mean change in the file and use git add . git commited into stages 
-the if u need to delete the commit 
-use the git revert with hsh 
-
-----------
-new coommit 
-other commit
-helloo I need to change here !!!!!!!
